@@ -2,15 +2,15 @@ package hakan.questapp.business.service;
 
 import hakan.questapp.business.requests.CreateUserRequest;
 import hakan.questapp.business.requests.UpdateUserRequest;
+import hakan.questapp.business.requests.UserDto;
 import hakan.questapp.business.responses.GetAllUsersResponse;
-import hakan.questapp.business.responses.UserDto;
 import hakan.questapp.entities.User;
 
 import java.util.List;
 
 public interface UserService {
 
-    List<UserDto> getAll();
+    List<GetAllUsersResponse> getAll();
 
     UserDto getById(Long id);
     void add(CreateUserRequest createUserRequest);
@@ -19,8 +19,4 @@ public interface UserService {
 
     void delete(Long id);
 
-
-    //model mapper
-    public <T> UserDto EntityToDto(User user);
-    public <T> User DtoToEntity(T dto);
 }

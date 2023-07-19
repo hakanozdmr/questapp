@@ -1,4 +1,4 @@
-package hakan.questapp.business.responses;
+package hakan.questapp.business.requests;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

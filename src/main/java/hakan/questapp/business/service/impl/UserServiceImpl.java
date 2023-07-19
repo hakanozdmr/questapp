@@ -1,12 +1,13 @@
 package hakan.questapp.business.service.impl;
 
+import hakan.questapp.business.responses.GetAllUsersResponse;
 import hakan.questapp.business.rules.UserBusinessRules;
 import hakan.questapp.business.requests.CreateUserRequest;
 import hakan.questapp.business.requests.UpdateUserRequest;
-import hakan.questapp.business.responses.UserDto;
+import hakan.questapp.business.requests.UserDto;
+import hakan.questapp.business.service.DtoConverterService;
 import hakan.questapp.business.service.UserService;
 import hakan.questapp.entities.User;
-import hakan.questapp.exceptions.BusinessException;
 import hakan.questapp.repos.UserRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,11 +17,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl  implements UserService {
 
     @Autowired
     private UserRepository userRepository;
@@ -31,21 +31,20 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @Autowired
-    private ModelMapper modelMapper;
+    private DtoConverterService dtoConverterService;
 
-    public UserServiceImpl(UserRepository userRepository, UserBusinessRules userBusinessRules, PasswordEncoder passwordEncoder, ModelMapper modelMapper) {
+    public UserServiceImpl(UserRepository userRepository, UserBusinessRules userBusinessRules, PasswordEncoder passwordEncoder, DtoConverterService dtoConverterService) {
         this.userRepository = userRepository;
         this.userBusinessRules = userBusinessRules;
         this.passwordEncoder = passwordEncoder;
-        this.modelMapper = modelMapper;
+        this.dtoConverterService = dtoConverterService;
     }
 
     @Override
-    public List<UserDto> getAll() {
+    public List<GetAllUsersResponse> getAll() {
         Sort sort = Sort.by(Sort.Direction.ASC,"id");
         List<User> brands = userRepository.findAll(sort);
-        List<UserDto> listDto = brands.stream().map(brand -> EntityToDto(brand)).collect(Collectors.toList());
+        List<GetAllUsersResponse> listDto = brands.stream().map(brand -> dtoConverterService.entityToDto(brand,GetAllUsersResponse.class)).collect(Collectors.toList());
         return  listDto;
     }
 
@@ -53,14 +52,14 @@ public class UserServiceImpl implements UserService {
     public UserDto getById(Long id) {
         this.userBusinessRules.checkIfUserExist(id);
         User user = userRepository.findById(id).orElseThrow();
-        UserDto userDto = EntityToDto(user);
+        UserDto userDto = dtoConverterService.entityToDto(user, UserDto.class);
         return userDto;
     }
 
     @Override
     public void add(@RequestBody CreateUserRequest createUserRequest) {
         this.userBusinessRules.checkIfUserNameExists(createUserRequest.getUserName());
-        User user = DtoToEntity(createUserRequest);
+        User user = dtoConverterService.dtoToEntity(createUserRequest,User.class);
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         this.userRepository.save(user);
     }
@@ -78,20 +77,5 @@ public class UserServiceImpl implements UserService {
     public void delete(Long id) {
         this.userBusinessRules.checkIfUserExist(id);
         userRepository.deleteById(id);
-    }
-
-    ////////////////////////////////////
-    //Model Mapper Entity ==> Dto
-    @Override
-    public <T> UserDto  EntityToDto(User user) {
-        UserDto userDto = modelMapper.map(user, UserDto.class);
-        return userDto;
-    }
-
-    //Model Mapper Dto  ==> Entity
-    @Override
-    public <T> User DtoToEntity(T dto) {
-        User user = modelMapper.map(dto, User.class);
-        return user;
     }
 }

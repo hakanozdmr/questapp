@@ -2,7 +2,6 @@ package hakan.questapp.api.controllers;
 
 import hakan.questapp.business.requests.CreateUserRequest;
 import hakan.questapp.business.requests.UpdateUserRequest;
-import hakan.questapp.business.responses.UserDto;
 import hakan.questapp.business.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -11,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
+@CrossOrigin
 public class UserController {
     private final UserService userService;
 

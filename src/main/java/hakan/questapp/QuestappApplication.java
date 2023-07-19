@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashMap;
+import java.util.NoSuchElementException;
 
 @SpringBootApplication(exclude = {
         org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
@@ -31,6 +32,13 @@ public class QuestappApplication {
     public ProblemDetails handleBusinessException(BusinessException businessException){
         ProblemDetails problemDetails = new ProblemDetails();
         problemDetails.setMessage(businessException.getMessage());
+        return problemDetails;
+    }
+    @ExceptionHandler
+    @ResponseStatus(code = HttpStatus.BAD_REQUEST)
+    public ProblemDetails handleNoSuchElementException(NoSuchElementException noSuchElementException){
+        ProblemDetails problemDetails = new ProblemDetails();
+        problemDetails.setMessage(noSuchElementException.getMessage());
         return problemDetails;
     }
     @ExceptionHandler

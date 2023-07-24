@@ -78,4 +78,10 @@ public class UserServiceImpl  implements UserService {
         this.userBusinessRules.checkIfUserExist(id);
         userRepository.deleteById(id);
     }
+
+    @Override
+    public User getOneUserByUserName(String userName) {
+        this.userBusinessRules.checkIfUserNameExists(userName);
+        return userRepository.findByUserName(userName);
+    }
 }

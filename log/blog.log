@@ -1,3 +1,352 @@
-2023-07-17T01:02:06.858+03:00  INFO 2280 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-17T01:02:06.866+03:00  INFO 2280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2023-07-17T01:02:06.869+03:00  INFO 2280 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T06:05:22.669+03:00  INFO 14840 --- [restartedMain] hakan.questapp.QuestappApplication       : Starting QuestappApplication using Java 20 with PID 14840 (C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes started by 0meng in C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp)
+2023-07-24T06:05:22.680+03:00  INFO 14840 --- [restartedMain] hakan.questapp.QuestappApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T06:05:22.762+03:00  INFO 14840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24T06:05:22.762+03:00  INFO 14840 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-24T06:05:23.886+03:00  WARN 14840 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'passwordEncoder' defined in class path resource [hakan/questapp/config/SecurityConfig.class]: Cannot register bean definition [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=securityConfig; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [hakan/questapp/config/SecurityConfig.class]] for bean 'passwordEncoder' since there is already [Root bean: class [null]; scope=; abstract=false; lazyInit=null; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=passwordEncoderBean; factoryMethodName=passwordEncoder; initMethodNames=null; destroyMethodNames=[(inferred)]; defined in class path resource [hakan/questapp/bean/PasswordEncoderBean.class]] bound.
+2023-07-24T06:05:23.898+03:00  INFO 14840 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-24T06:05:23.921+03:00 ERROR 14840 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'passwordEncoder', defined in class path resource [hakan/questapp/config/SecurityConfig.class], could not be registered. A bean with that name has already been defined in class path resource [hakan/questapp/bean/PasswordEncoderBean.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-07-24T06:05:47.786+03:00  INFO 1500 --- [restartedMain] hakan.questapp.QuestappApplication       : Starting QuestappApplication using Java 20 with PID 1500 (C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes started by 0meng in C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp)
+2023-07-24T06:05:47.788+03:00  INFO 1500 --- [restartedMain] hakan.questapp.QuestappApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T06:05:47.852+03:00  INFO 1500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24T06:05:47.852+03:00  INFO 1500 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-24T06:05:48.980+03:00  INFO 1500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:05:48.981+03:00  INFO 1500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-07-24T06:05:49.016+03:00  INFO 1500 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.CommentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:05:49.017+03:00  INFO 1500 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.LikeRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:05:49.018+03:00  INFO 1500 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.PostRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:05:49.020+03:00  INFO 1500 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.RefreshTokenRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:05:49.021+03:00  INFO 1500 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:05:49.021+03:00  INFO 1500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 0 JDBC repository interfaces.
+2023-07-24T06:05:49.028+03:00  INFO 1500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:05:49.030+03:00  INFO 1500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T06:05:49.063+03:00  INFO 1500 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 5 JPA repository interfaces.
+2023-07-24T06:05:49.662+03:00  INFO 1500 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-24T06:05:49.670+03:00  INFO 1500 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T06:05:49.671+03:00  INFO 1500 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-24T06:05:49.734+03:00  INFO 1500 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T06:05:49.735+03:00  INFO 1500 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1881 ms
+2023-07-24T06:05:49.935+03:00  INFO 1500 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T06:05:50.014+03:00  INFO 1500 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-24T06:05:50.017+03:00  INFO 1500 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-24T06:05:50.161+03:00  INFO 1500 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:05:50.295+03:00  INFO 1500 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-24T06:05:50.311+03:00  INFO 1500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T06:05:50.934+03:00  INFO 1500 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e1591ff
+2023-07-24T06:05:50.935+03:00  INFO 1500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T06:05:51.454+03:00  INFO 1500 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:05:52.197+03:00  INFO 1500 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T06:05:52.382+03:00  WARN 1500 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-07-24T06:05:52.382+03:00  WARN 1500 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : constraint "uk_r4k4edos30bx9neoq81mdvwph" of relation "refresh_token" does not exist, skipping
+2023-07-24T06:05:52.455+03:00  INFO 1500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:05:52.888+03:00  WARN 1500 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes\hakan\questapp\api\controllers\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 4: Error creating bean with name 'refreshTokenService': Injection of autowired dependencies failed
+2023-07-24T06:05:52.888+03:00  INFO 1500 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:05:52.890+03:00  INFO 1500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T06:05:52.893+03:00  INFO 1500 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T06:05:52.896+03:00  INFO 1500 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-24T06:05:52.914+03:00  INFO 1500 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-24T06:05:52.930+03:00 ERROR 1500 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes\hakan\questapp\api\controllers\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 4: Error creating bean with name 'refreshTokenService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1189) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:941) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-3.1.1.jar:3.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-3.1.1.jar:3.1.1]
+	at hakan.questapp.QuestappApplication.main(QuestappApplication.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.1.1.jar:3.1.1]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'refreshTokenService': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:489) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1417) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:888) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.0.10.jar:6.0.10]
+	... 22 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'refresh.token.expires.in' in value "${refresh.token.expires.in}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-6.0.10.jar:6.0.10]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191) ~[spring-context-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:920) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1358) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:711) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:694) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145) ~[spring-beans-6.0.10.jar:6.0.10]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:483) ~[spring-beans-6.0.10.jar:6.0.10]
+	... 34 common frames omitted
+
+2023-07-24T06:10:34.000+03:00  INFO 16328 --- [restartedMain] hakan.questapp.QuestappApplication       : Starting QuestappApplication using Java 20 with PID 16328 (C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes started by 0meng in C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp)
+2023-07-24T06:10:34.001+03:00  INFO 16328 --- [restartedMain] hakan.questapp.QuestappApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T06:10:34.054+03:00  INFO 16328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24T06:10:34.055+03:00  INFO 16328 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-24T06:10:35.137+03:00  INFO 16328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:10:35.138+03:00  INFO 16328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-07-24T06:10:35.170+03:00  INFO 16328 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.CommentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:10:35.172+03:00  INFO 16328 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.LikeRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:10:35.173+03:00  INFO 16328 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.PostRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:10:35.174+03:00  INFO 16328 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.RefreshTokenRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:10:35.176+03:00  INFO 16328 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:10:35.176+03:00  INFO 16328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.
+2023-07-24T06:10:35.183+03:00  INFO 16328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:10:35.184+03:00  INFO 16328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T06:10:35.213+03:00  INFO 16328 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 5 JPA repository interfaces.
+2023-07-24T06:10:35.756+03:00  INFO 16328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-24T06:10:35.764+03:00  INFO 16328 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T06:10:35.764+03:00  INFO 16328 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-24T06:10:35.818+03:00  INFO 16328 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T06:10:35.818+03:00  INFO 16328 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1763 ms
+2023-07-24T06:10:35.984+03:00  INFO 16328 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T06:10:36.049+03:00  INFO 16328 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-24T06:10:36.052+03:00  INFO 16328 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-24T06:10:36.166+03:00  INFO 16328 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:10:36.281+03:00  INFO 16328 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-24T06:10:36.294+03:00  INFO 16328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T06:10:36.436+03:00  INFO 16328 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64e82a23
+2023-07-24T06:10:36.438+03:00  INFO 16328 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T06:10:36.744+03:00  INFO 16328 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:10:37.466+03:00  INFO 16328 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T06:10:37.584+03:00  INFO 16328 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:10:38.221+03:00  WARN 16328 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T06:10:38.522+03:00  INFO 16328 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-24T06:10:38.558+03:00  INFO 16328 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@19c58f50, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c6b529d, org.springframework.security.web.context.SecurityContextHolderFilter@168e36af, org.springframework.security.web.header.HeaderWriterFilter@3ac68993, org.springframework.security.web.authentication.logout.LogoutFilter@3d43922e, hakan.questapp.security.JwtAuthenticationFilter@1857eadc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@514eae2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2d1e332c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6cecbba6, org.springframework.security.web.session.SessionManagementFilter@8c18ce2, org.springframework.security.web.access.ExceptionTranslationFilter@32eff39f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28dd68e9]
+2023-07-24T06:10:38.946+03:00  INFO 16328 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24T06:10:39.009+03:00  INFO 16328 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-24T06:10:39.025+03:00  INFO 16328 --- [restartedMain] hakan.questapp.QuestappApplication       : Started QuestappApplication in 5.373 seconds (process running for 6.009)
+2023-07-24T06:10:39.326+03:00  INFO 16328 --- [RMI TCP Connection(2)-192.168.1.37] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-24T06:10:39.326+03:00  INFO 16328 --- [RMI TCP Connection(2)-192.168.1.37] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24T06:10:39.327+03:00  INFO 16328 --- [RMI TCP Connection(2)-192.168.1.37] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-24T06:10:42.664+03:00  INFO 16328 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [accessToken=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYWtvaGFrbzEyMyIsImV4cCI6MTY4OTM2NzA2NCwiaWF0IjoxNjg5MzQ5MDY0fQ.YL8litvKKSbcvvy6LEj4ts-d371wrSX7l7KBrgtN9ME] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2023-07-24T06:11:38.530+03:00  INFO 16328 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:11:38.540+03:00  INFO 16328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T06:11:38.554+03:00  INFO 16328 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T06:11:51.097+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : Starting QuestappApplication using Java 20 with PID 15796 (C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes started by 0meng in C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp)
+2023-07-24T06:11:51.099+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T06:11:51.157+03:00  INFO 15796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24T06:11:51.157+03:00  INFO 15796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-24T06:11:52.339+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:11:52.340+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-07-24T06:11:52.374+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.CommentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:11:52.375+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.LikeRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:11:52.376+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.PostRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:11:52.377+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.RefreshTokenRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:11:52.378+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:11:52.378+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.
+2023-07-24T06:11:52.385+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:11:52.386+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T06:11:52.416+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 5 JPA repository interfaces.
+2023-07-24T06:11:52.949+03:00  INFO 15796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-24T06:11:52.956+03:00  INFO 15796 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T06:11:52.956+03:00  INFO 15796 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-24T06:11:53.010+03:00  INFO 15796 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T06:11:53.010+03:00  INFO 15796 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1852 ms
+2023-07-24T06:11:53.198+03:00  INFO 15796 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T06:11:53.253+03:00  INFO 15796 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-24T06:11:53.256+03:00  INFO 15796 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-24T06:11:53.376+03:00  INFO 15796 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:11:53.494+03:00  INFO 15796 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-24T06:11:53.507+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T06:11:53.655+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@301a301
+2023-07-24T06:11:53.656+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T06:11:53.999+03:00  INFO 15796 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:11:54.716+03:00  INFO 15796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T06:11:54.843+03:00  INFO 15796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:11:55.454+03:00  WARN 15796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T06:11:55.735+03:00  INFO 15796 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-24T06:11:55.772+03:00  INFO 15796 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@793a8041, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a5867e6, org.springframework.security.web.context.SecurityContextHolderFilter@3b86234, org.springframework.security.web.header.HeaderWriterFilter@12ac1e00, org.springframework.security.web.authentication.logout.LogoutFilter@74bd2a67, hakan.questapp.security.JwtAuthenticationFilter@6f44fc69, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ccecc71, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4411570b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5778d272, org.springframework.security.web.session.SessionManagementFilter@3771dc9f, org.springframework.security.web.access.ExceptionTranslationFilter@7ebac317, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48c22cf3]
+2023-07-24T06:11:56.188+03:00  INFO 15796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24T06:11:56.253+03:00  INFO 15796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-24T06:11:56.270+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : Started QuestappApplication in 5.54 seconds (process running for 6.224)
+2023-07-24T06:11:56.409+03:00  INFO 15796 --- [RMI TCP Connection(2)-192.168.1.37] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-24T06:11:56.410+03:00  INFO 15796 --- [RMI TCP Connection(2)-192.168.1.37] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24T06:11:56.412+03:00  INFO 15796 --- [RMI TCP Connection(2)-192.168.1.37] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-07-24T06:11:59.910+03:00  INFO 15796 --- [http-nio-8080-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [accessToken=Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYWtvaGFrbzEyMyIsImV4cCI6MTY4OTM2NzA2NCwiaWF0IjoxNjg5MzQ5MDY0fQ.YL8litvKKSbcvvy6LEj4ts-d371wrSX7l7KBrgtN9ME] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2023-07-24T06:18:14.844+03:00  INFO 15796 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 1 deletion, 1 modification)
+2023-07-24T06:18:14.860+03:00  INFO 15796 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-24T06:18:14.861+03:00  INFO 15796 --- [Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-07-24T06:18:14.864+03:00  WARN 15796 --- [Thread-5] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1758)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1070)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1623)
+2023-07-24T06:18:14.876+03:00  INFO 15796 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:18:14.879+03:00  INFO 15796 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T06:18:14.882+03:00  INFO 15796 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-07-24T06:18:14.981+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : Starting QuestappApplication using Java 20 with PID 15796 (C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes started by 0meng in C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp)
+2023-07-24T06:18:14.981+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T06:18:15.553+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:18:15.554+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-07-24T06:18:15.566+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.CommentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:15.567+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.LikeRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:15.568+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.PostRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:15.570+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.RefreshTokenRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:15.571+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:15.572+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JDBC repository interfaces.
+2023-07-24T06:18:15.578+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:18:15.578+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T06:18:15.595+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2023-07-24T06:18:15.747+03:00  INFO 15796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-24T06:18:15.747+03:00  INFO 15796 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T06:18:15.748+03:00  INFO 15796 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-24T06:18:15.772+03:00  INFO 15796 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T06:18:15.772+03:00  INFO 15796 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 788 ms
+2023-07-24T06:18:15.866+03:00  INFO 15796 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T06:18:15.874+03:00  INFO 15796 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:18:15.874+03:00  INFO 15796 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-24T06:18:15.875+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2023-07-24T06:18:15.930+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@68c70deb
+2023-07-24T06:18:15.930+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2023-07-24T06:18:15.967+03:00  INFO 15796 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:18:16.100+03:00  INFO 15796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T06:18:16.215+03:00  INFO 15796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:18:16.356+03:00  WARN 15796 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController' defined in file [C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes\hakan\questapp\api\controllers\AuthController.class]: Unsatisfied dependency expressed through constructor parameter 4: No qualifying bean of type 'hakan.questapp.business.service.RefreshTokenService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-07-24T06:18:16.357+03:00  INFO 15796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:18:16.357+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2023-07-24T06:18:16.468+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2023-07-24T06:18:16.469+03:00  INFO 15796 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-07-24T06:18:16.483+03:00  INFO 15796 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-24T06:18:16.505+03:00 ERROR 15796 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 4 of constructor in hakan.questapp.api.controllers.AuthController required a bean of type 'hakan.questapp.business.service.RefreshTokenService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'hakan.questapp.business.service.RefreshTokenService' in your configuration.
+
+2023-07-24T06:18:17.986+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : Starting QuestappApplication using Java 20 with PID 15796 (C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes started by 0meng in C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp)
+2023-07-24T06:18:17.986+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T06:18:18.298+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:18:18.298+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-07-24T06:18:18.308+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.CommentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:18.309+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.LikeRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:18.310+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.PostRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:18.311+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.RefreshTokenRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:18.312+03:00  INFO 15796 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:18:18.312+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JDBC repository interfaces.
+2023-07-24T06:18:18.316+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:18:18.316+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T06:18:18.328+03:00  INFO 15796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 5 JPA repository interfaces.
+2023-07-24T06:18:18.430+03:00  INFO 15796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-24T06:18:18.432+03:00  INFO 15796 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T06:18:18.432+03:00  INFO 15796 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-24T06:18:18.451+03:00  INFO 15796 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2023-07-24T06:18:18.451+03:00  INFO 15796 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 458 ms
+2023-07-24T06:18:18.501+03:00  INFO 15796 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T06:18:18.509+03:00  INFO 15796 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:18:18.510+03:00  INFO 15796 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-24T06:18:18.510+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2023-07-24T06:18:18.569+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@74c824b9
+2023-07-24T06:18:18.569+03:00  INFO 15796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2023-07-24T06:18:18.609+03:00  INFO 15796 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:18:18.678+03:00  INFO 15796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T06:18:18.774+03:00  INFO 15796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:18:19.035+03:00  WARN 15796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T06:18:19.160+03:00  INFO 15796 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-24T06:18:19.173+03:00  INFO 15796 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e61fdbb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4e78ab2, org.springframework.security.web.context.SecurityContextHolderFilter@5a1113ba, org.springframework.security.web.header.HeaderWriterFilter@6acdcfca, org.springframework.security.web.authentication.logout.LogoutFilter@552b3c63, hakan.questapp.security.JwtAuthenticationFilter@619517f6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@66f9288c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@624e1806, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d663429, org.springframework.security.web.session.SessionManagementFilter@54163912, org.springframework.security.web.access.ExceptionTranslationFilter@1b74e410, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c34366d]
+2023-07-24T06:18:19.319+03:00  INFO 15796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24T06:18:19.334+03:00  INFO 15796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-24T06:18:19.342+03:00  INFO 15796 --- [restartedMain] hakan.questapp.QuestappApplication       : Started QuestappApplication in 1.377 seconds (process running for 389.296)
+2023-07-24T06:18:19.345+03:00  INFO 15796 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-07-24T06:25:55.599+03:00  INFO 15796 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:25:55.600+03:00  INFO 15796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2023-07-24T06:25:55.602+03:00  INFO 15796 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-07-24T06:25:59.048+03:00  INFO 1240 --- [restartedMain] hakan.questapp.QuestappApplication       : Starting QuestappApplication using Java 20 with PID 1240 (C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp\target\classes started by 0meng in C:\Users\0meng\OneDrive\Belgeler\GitHub\questapp)
+2023-07-24T06:25:59.050+03:00  INFO 1240 --- [restartedMain] hakan.questapp.QuestappApplication       : No active profile set, falling back to 1 default profile: "default"
+2023-07-24T06:25:59.101+03:00  INFO 1240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-07-24T06:25:59.101+03:00  INFO 1240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-07-24T06:26:00.124+03:00  INFO 1240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:26:00.125+03:00  INFO 1240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-07-24T06:26:00.162+03:00  INFO 1240 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.CommentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:26:00.163+03:00  INFO 1240 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.LikeRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:26:00.164+03:00  INFO 1240 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.PostRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:26:00.166+03:00  INFO 1240 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.RefreshTokenRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:26:00.167+03:00  INFO 1240 --- [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface hakan.questapp.repos.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-07-24T06:26:00.168+03:00  INFO 1240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 0 JDBC repository interfaces.
+2023-07-24T06:26:00.177+03:00  INFO 1240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-24T06:26:00.178+03:00  INFO 1240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-24T06:26:00.216+03:00  INFO 1240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 5 JPA repository interfaces.
+2023-07-24T06:26:00.836+03:00  INFO 1240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-07-24T06:26:00.846+03:00  INFO 1240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-07-24T06:26:00.846+03:00  INFO 1240 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-07-24T06:26:00.906+03:00  INFO 1240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-07-24T06:26:00.906+03:00  INFO 1240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1804 ms
+2023-07-24T06:26:01.124+03:00  INFO 1240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-07-24T06:26:01.187+03:00  INFO 1240 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.5.Final
+2023-07-24T06:26:01.190+03:00  INFO 1240 --- [restartedMain] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2023-07-24T06:26:01.324+03:00  INFO 1240 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:26:01.458+03:00  INFO 1240 --- [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-07-24T06:26:01.473+03:00  INFO 1240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-07-24T06:26:01.736+03:00  INFO 1240 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f011052
+2023-07-24T06:26:01.737+03:00  INFO 1240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-07-24T06:26:02.036+03:00  INFO 1240 --- [restartedMain] o.h.b.i.BytecodeProviderInitiator        : HHH000021: Bytecode provider name : bytebuddy
+2023-07-24T06:26:02.778+03:00  INFO 1240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-07-24T06:26:02.931+03:00  INFO 1240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:26:03.602+03:00  WARN 1240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-24T06:26:03.943+03:00  INFO 1240 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-07-24T06:26:03.980+03:00  INFO 1240 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2ffa67de, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6776ad0c, org.springframework.security.web.context.SecurityContextHolderFilter@40a1541, org.springframework.security.web.header.HeaderWriterFilter@43ec1f1d, org.springframework.security.web.authentication.logout.LogoutFilter@33bcbefb, hakan.questapp.security.JwtAuthenticationFilter@28bde031, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@172158db, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74bd2a67, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36266d04, org.springframework.security.web.session.SessionManagementFilter@13315eb2, org.springframework.security.web.access.ExceptionTranslationFilter@19b89972, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@64c6161d]
+2023-07-24T06:26:04.403+03:00  INFO 1240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-07-24T06:26:04.484+03:00  INFO 1240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-07-24T06:26:04.501+03:00  INFO 1240 --- [restartedMain] hakan.questapp.QuestappApplication       : Started QuestappApplication in 5.816 seconds (process running for 6.435)
+2023-07-24T06:26:04.912+03:00  INFO 1240 --- [RMI TCP Connection(3)-192.168.1.37] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-07-24T06:26:04.912+03:00  INFO 1240 --- [RMI TCP Connection(3)-192.168.1.37] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-07-24T06:26:04.913+03:00  INFO 1240 --- [RMI TCP Connection(3)-192.168.1.37] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2023-07-24T06:26:27.149+03:00  INFO 1240 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-07-24T06:26:27.152+03:00  INFO 1240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-07-24T06:26:27.156+03:00  INFO 1240 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

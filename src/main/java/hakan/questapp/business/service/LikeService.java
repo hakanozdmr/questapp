@@ -1,9 +1,6 @@
 package hakan.questapp.business.service;
 
-import hakan.questapp.business.requests.CommentDto;
-import hakan.questapp.business.requests.CreateCommentRequest;
-import hakan.questapp.business.requests.LikeDto;
-import hakan.questapp.business.requests.UpdateCommentRequest;
+import hakan.questapp.business.requests.*;
 import hakan.questapp.business.responses.GetAllLikeResponse;
 
 import java.util.List;
@@ -14,6 +11,6 @@ public interface LikeService {
     List<GetAllLikeResponse> getAll(Optional<Long> userId, Optional<Long> postId);
 
     LikeDto getById(Long id);
-    void add(CreateCommentRequest createCommentRequest);
+    void add(CreateLikeRequest createLikeRequest);
     void delete(Long id);
 }

@@ -1,6 +1,8 @@
 package hakan.questapp.business.responses;
 
+import hakan.questapp.business.requests.LikeDto;
 import hakan.questapp.entities.Comment;
+import hakan.questapp.entities.Like;
 import hakan.questapp.entities.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,5 +25,7 @@ public class GetAllPostsResponse {
     private Date createdDate;
 
     private List<Comment> comments;
+
+    private List<LikeDto> likes;
 }
 

@@ -1,6 +1,7 @@
 package hakan.questapp.api.controllers;
 
 import hakan.questapp.business.requests.CreateCommentRequest;
+import hakan.questapp.business.requests.CreateLikeRequest;
 import hakan.questapp.business.requests.UpdateCommentRequest;
 import hakan.questapp.business.service.CommentService;
 import hakan.questapp.business.service.LikeService;
@@ -32,9 +33,9 @@ public class LikeController {
     }
     @PostMapping()
     @ResponseStatus(code = HttpStatus.CREATED)
-    public CreateCommentRequest add(@RequestBody @Valid CreateCommentRequest createCommentRequest){
-        likeService.add(createCommentRequest);
-        return createCommentRequest;
+    public CreateLikeRequest add(@RequestBody @Valid CreateLikeRequest createLikeRequest){
+        likeService.add(createLikeRequest);
+        return createLikeRequest;
     }
     @DeleteMapping()
     @ResponseStatus(code = HttpStatus.OK)

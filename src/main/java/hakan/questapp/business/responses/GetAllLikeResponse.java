@@ -13,8 +13,8 @@ public class GetAllLikeResponse {
 
 
     private Long id;
-    private User user;
+    private Long userId;
 
-    private Post post;
+    private Long postId;
 }
 

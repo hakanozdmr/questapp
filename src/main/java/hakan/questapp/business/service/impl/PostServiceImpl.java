@@ -45,7 +45,7 @@ public class PostServiceImpl implements PostService {
     @Override
     @Transactional
     public List<GetAllPostsResponse> getAll(Optional<Long> userId) {
-        Sort sort = Sort.by(Sort.Direction.ASC,"id");
+        Sort sort = Sort.by(Sort.Direction.DESC,"createdDate");
         if (userId.isPresent()){
             this.postBusinessRules.checkIfPostsUserExist(userId.get());
             List<Post> posts = postRepository.findByUserId(userId.get(),sort);

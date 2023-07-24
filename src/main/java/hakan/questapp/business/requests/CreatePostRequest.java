@@ -19,7 +19,7 @@ public class CreatePostRequest {
     private String title;
     @NotNull
     @NotBlank
-    @Size(min = 3)
+    @Size(min = 3,max = 250)
     private String text;
 
     private Long postUserId;

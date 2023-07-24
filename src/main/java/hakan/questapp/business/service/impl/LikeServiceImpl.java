@@ -1,6 +1,8 @@
 package hakan.questapp.business.service.impl;
 
+import hakan.questapp.business.requests.CommentDto;
 import hakan.questapp.business.requests.CreateCommentRequest;
+import hakan.questapp.business.requests.CreateLikeRequest;
 import hakan.questapp.business.requests.LikeDto;
 import hakan.questapp.business.responses.GetAllCommentResponse;
 import hakan.questapp.business.responses.GetAllLikeResponse;
@@ -45,18 +47,18 @@ public class LikeServiceImpl implements LikeService {
     public List<GetAllLikeResponse> getAll(Optional<Long> userId, Optional<Long> postId) {
         Sort sort = Sort.by(Sort.Direction.ASC,"id");
         if(userId.isPresent() && postId.isPresent()){
-            this.likeBusinessRules.checkIfCommentPostAndUserExist(userId.get(),postId.get());
+            this.likeBusinessRules.checkIfLikePostAndUserExist(postId.get(),userId.get());
             List<Like> likes =  likeRepository.findByUserIdAndPostId(userId.get(),postId.get());
             List<GetAllLikeResponse> listDto = likes.stream().map(like -> dtoConverterService.entityToDto(like, GetAllLikeResponse.class)).collect(Collectors.toList());
             return listDto;
         } else if (userId.isPresent()) {
-            this.likeBusinessRules.checkIfCommentUserExist(userId.get());
+            this.likeBusinessRules.checkIfLikeUserExist(userId.get());
             List<Like> likes =  likeRepository.findByUserId(userId.get(),sort);
             List<GetAllLikeResponse> listDto = likes.stream().map(comment -> dtoConverterService.entityToDto(comment, GetAllLikeResponse.class)).collect(Collectors.toList());
             return listDto;
         }
         else if (postId.isPresent()) {
-            this.likeBusinessRules.checkIfCommentPostExist(postId.get());
+            this.likeBusinessRules.checkIfLikePostExist(postId.get());
             List<Like> likes =  likeRepository.findByPostId(postId.get(),sort);
             List<GetAllLikeResponse> listDto = likes.stream().map(comment -> dtoConverterService.entityToDto(comment, GetAllLikeResponse.class)).collect(Collectors.toList());
             return listDto;
@@ -69,16 +71,21 @@ public class LikeServiceImpl implements LikeService {
 
     @Override
     public LikeDto getById(Long id) {
-        return null;
+        this.likeBusinessRules.checkIfLikeExist(id);
+        Like like = likeRepository.findById(id).orElseThrow();
+        LikeDto likeDto = dtoConverterService.entityToDto(like, LikeDto.class);
+        return likeDto;
     }
 
     @Override
-    public void add(CreateCommentRequest createCommentRequest) {
-
+    public void add(CreateLikeRequest createLikeRequest) {
+        Like like = dtoConverterService.dtoToEntity(createLikeRequest, Like.class);
+        this.likeRepository.save(like);
     }
 
     @Override
     public void delete(Long id) {
-
+        this.likeBusinessRules.checkIfLikeExist(id);
+        likeRepository.deleteById(id);
     }
 }

@@ -16,10 +16,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 
-@SpringBootApplication(exclude = {
+/*@SpringBootApplication(exclude = {
         org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class,
         org.springframework.boot.actuate.autoconfigure.security.servlet.ManagementWebSecurityAutoConfiguration.class}
-)
+)*/
+@SpringBootApplication
 @RestControllerAdvice
 @EnableJpaAuditing(auditorAwareRef = "auditorAware")
 public class QuestappApplication {

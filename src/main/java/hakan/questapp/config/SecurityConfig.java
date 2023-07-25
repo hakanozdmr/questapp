@@ -3,6 +3,7 @@ package hakan.questapp.config;
 import hakan.questapp.business.service.impl.UserDetailsServiceImpl;
 import hakan.questapp.security.JwtAuthenticationEntryPoint;
 import hakan.questapp.security.JwtAuthenticationFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -25,8 +26,10 @@ import org.springframework.web.filter.CorsFilter;
 @EnableWebSecurity
 public class SecurityConfig {
 
+    @Autowired
     private UserDetailsServiceImpl userDetailsService;
 
+    @Autowired
     private JwtAuthenticationEntryPoint handler;
 
     public SecurityConfig(UserDetailsServiceImpl userDetailsService, JwtAuthenticationEntryPoint handler) {
@@ -79,6 +82,8 @@ public class SecurityConfig {
                 .requestMatchers("/auth/**")
                 .permitAll()
                 .requestMatchers("/swagger-ui/**")
+                .permitAll()
+                .requestMatchers("/v3/**")
                 .permitAll()
                 .anyRequest().authenticated();
 

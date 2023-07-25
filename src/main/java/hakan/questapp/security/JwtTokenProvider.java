@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
 
+
 import java.util.Date;
 
 @Component
@@ -18,9 +19,8 @@ public class JwtTokenProvider {
     private long EXPIRES_IN;
 
     public String generateJwtToken(Authentication auth){
-        JwtUserDetails userDetails = ( JwtUserDetails) auth.getPrincipal();
         Date expireDate = new Date(new Date().getTime() + EXPIRES_IN);
-        return Jwts.builder().setSubject(Long.toString(userDetails.getId()))
+        return Jwts.builder().setSubject(auth.getName())
                 .setIssuedAt(new Date()).setExpiration(expireDate)
                 .signWith(SignatureAlgorithm.HS512, APP_SECRET).compact();
     }

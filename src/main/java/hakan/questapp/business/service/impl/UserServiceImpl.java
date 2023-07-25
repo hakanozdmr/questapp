@@ -81,7 +81,6 @@ public class UserServiceImpl  implements UserService {
 
     @Override
     public User getOneUserByUserName(String userName) {
-        this.userBusinessRules.checkIfUserNameExists(userName);
         return userRepository.findByUserName(userName);
     }
 }

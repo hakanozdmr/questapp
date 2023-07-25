@@ -14,7 +14,7 @@ public class UserBusinessRules {
     private UserRepository userRepository;
 
     public void checkIfUserNameExists(String userName){
-        if(this.userRepository.existsByUserName(userName)){
+        if(this.userRepository.existsUserByUserName(userName)){
             throw new BusinessException("Username already exists");
         }
     }

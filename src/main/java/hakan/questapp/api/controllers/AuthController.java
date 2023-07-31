@@ -16,15 +16,13 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 
 @RestController
 @RequestMapping("/auth")
-public class AuthController {
+@CrossOrigin
+public class    AuthController {
 
     private AuthenticationManager authenticationManager;
 
@@ -57,6 +55,7 @@ public class AuthController {
         authResponse.setAccessToken("Bearer " + jwtToken);
         authResponse.setRefreshToken(refreshTokenService.createRefreshToken(user));
         authResponse.setUserId(user.getId());
+        authResponse.setUser(user);
         return authResponse;
     }
 
@@ -87,9 +86,10 @@ public class AuthController {
 
             User user = token.getUser();
             String jwtToken = jwtTokenProvider.generateJwtTokenByUserId(user.getId());
-            response.setMessage("token successfully refreshed.");
+            response.setMessage("Token successfully refreshed.");
             response.setAccessToken("Bearer " + jwtToken);
             response.setUserId(user.getId());
+            response.setRefreshToken(refreshRequest.getRefreshToken());
             return new ResponseEntity<>(response, HttpStatus.OK);
         } else {
             response.setMessage("refresh token is not valid.");

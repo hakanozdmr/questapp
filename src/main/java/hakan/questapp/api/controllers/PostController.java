@@ -4,6 +4,8 @@ import hakan.questapp.business.requests.CreatePostRequest;
 import hakan.questapp.business.requests.CreateUserRequest;
 import hakan.questapp.business.requests.UpdatePostRequest;
 import hakan.questapp.business.requests.UpdateUserRequest;
+import hakan.questapp.business.responses.AuthResponse;
+import hakan.questapp.business.responses.GetAllPostsResponse;
 import hakan.questapp.business.service.PostService;
 import hakan.questapp.business.service.UserService;
 import jakarta.validation.Valid;
@@ -36,9 +38,11 @@ public class PostController {
     }*/
     @PostMapping()
     @ResponseStatus(code = HttpStatus.CREATED)
-    public CreatePostRequest add(@RequestBody @Valid CreatePostRequest createPostRequest){
-        postService.add(createPostRequest);
-        return createPostRequest;
+    public ResponseEntity<GetAllPostsResponse> add(@RequestBody @Valid CreatePostRequest createPostRequest){
+         postService.add(createPostRequest);
+        GetAllPostsResponse authResponse = new GetAllPostsResponse();
+        authResponse.setText(createPostRequest.getText());
+        return new ResponseEntity<>(authResponse, HttpStatus.CREATED);
     }
     @PutMapping()
     @ResponseStatus(code = HttpStatus.OK)

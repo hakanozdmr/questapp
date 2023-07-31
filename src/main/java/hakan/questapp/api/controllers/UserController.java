@@ -18,10 +18,12 @@ public class UserController {
         this.userService = userService;
     }
     @GetMapping()
+    @ResponseStatus(code = HttpStatus.OK)
     public ResponseEntity<?> findAllUsers(){
         return new ResponseEntity<>(userService.getAll(), HttpStatus.OK);
     }
     @GetMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.OK)
     public ResponseEntity<?> findById(@PathVariable("id") Long id){
         return new ResponseEntity<>(userService.getById(id), HttpStatus.OK);
     }

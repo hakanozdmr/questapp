@@ -12,6 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class LikeDto {
 
+
+    private Long id;
     @NotNull
     @NotBlank
     private Long userId;

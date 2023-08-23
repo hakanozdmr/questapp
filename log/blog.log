@@ -1,3 +1,9 @@
-2023-07-31T05:34:15.167+03:00  INFO 13100 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2023-07-31T05:34:15.342+03:00  INFO 13100 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2023-07-31T05:34:15.345+03:00  INFO 13100 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2023-08-01T02:05:59.945+03:00  WARN 24008 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hakan.questapp.exceptions.BusinessException: Post's comment not found]
+2023-08-01T02:05:59.961+03:00  WARN 24008 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hakan.questapp.exceptions.BusinessException: Post's comment not found]
+2023-08-01T02:05:59.959+03:00  WARN 24008 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hakan.questapp.exceptions.BusinessException: Post's comment not found]
+2023-08-01T02:06:33.797+03:00  WARN 24008 --- [http-nio-8080-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hakan.questapp.exceptions.BusinessException: Post's comment not found]
+2023-08-01T02:06:33.797+03:00  WARN 24008 --- [http-nio-8080-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hakan.questapp.exceptions.BusinessException: Post's comment not found]
+2023-08-01T02:06:33.804+03:00  WARN 24008 --- [http-nio-8080-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [hakan.questapp.exceptions.BusinessException: Post's comment not found]
+2023-08-01T03:02:58.070+03:00  INFO 24008 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-01T03:02:58.106+03:00  INFO 24008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-08-01T03:02:58.112+03:00  INFO 24008 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

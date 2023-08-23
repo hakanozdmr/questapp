@@ -1,5 +1,13 @@
+FROM openjdk:17 AS build
+
+COPY pom.xml mvnw ./
+COPY .mvn .mvn
+RUN ./mvnw dependency:resolve
+
+COPY src src
+RUN ./mvnw package
+
 FROM openjdk:17
-
-COPY questapp-0.0.1-SNAPSHOT.jar questapp.jar
-
-ENTRYPOINT ["java","-jar","/questapp.jar"]
+WORKDIR questapp
+COPY --from=build target/*.jar questapp.jar
+ENTRYPOINT ["java", "-jar", "questapp.jar"]
